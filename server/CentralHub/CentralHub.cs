@@ -32,6 +32,7 @@ namespace CentralHub
 
                     new TrafficLightHelper(async (trafficLight, status) =>
                     await Clients.All.SendAsync("RunTrafficLightsResponse", trafficLight, status, false)
+                    , new ParentChildSignalStayCalculator()
                     ).Run(setOfTrafficLight);
                 }
                 else
@@ -49,7 +50,7 @@ namespace CentralHub
             try
             {
                 var trafficLightDTO = Common.JsonSerializer.Deserialize<TrafficLightDTOSet>(state);
-                trafficLightsSets.TryAdd(trafficLightSetName, new TrafficLightHelper().Build(trafficLightDTO));
+                trafficLightsSets.TryAdd(trafficLightSetName, new TrafficLightHelper(new ParentChildSignalStayCalculator()).Build(trafficLightDTO));
                 await Clients.All.SendAsync("CreateTrafficLightsResponse", "server", "traffic light created successfully.", false);
             }
             catch (Exception exp)

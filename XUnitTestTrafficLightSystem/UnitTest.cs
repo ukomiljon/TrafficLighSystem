@@ -30,7 +30,7 @@ namespace XUnitTestTrafficLightSystem
             if (isPickHours()) return;
             var trafficLighSet = SettingsBuilder.BuildTrafficLightNormalHoursSet();
 
-            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status));
+            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status), new ParentChildSignalStayCalculator());
             var trafficLightSet = helper.Build(trafficLighSet);
             helper.Run(trafficLightSet, _cancelEventArgs);
 
@@ -61,7 +61,7 @@ namespace XUnitTestTrafficLightSystem
 
             var trafficLighSet = SettingsBuilder.BuildTrafficLightWithPickHoursSetSubSignal();
 
-            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status));
+            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status), new ParentChildSignalStayCalculator());
             var trafficLightSet = helper.Build(trafficLighSet);
             helper.Run(trafficLightSet, _cancelEventArgs);
 
@@ -91,7 +91,7 @@ namespace XUnitTestTrafficLightSystem
             if (!isPickHours()) return;// if no pickhours, it doesnot run.
             var trafficLighSet = SettingsBuilder.BuildTrafficLightWithPickHoursSetSubSignal();
 
-            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status));
+            var helper = new TrafficLightHelper((trafficLight, status) => Notify(trafficLight, status), new ParentChildSignalStayCalculator());
             var trafficLightSet = helper.Build(trafficLighSet);
             helper.Run(trafficLightSet, _cancelEventArgs);
 
