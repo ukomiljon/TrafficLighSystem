@@ -18,7 +18,7 @@ The first 2 sequences might be 1 second different, if the unit test fails it nee
 5. XUniteTestTrafficLightSystem - Unit test for various scenarios with normal / pickhours
 
 
-#Definition:
+# Definition:
 
 In this test we would like you to implement a traffic light system. We are required to have 4 sets of lights, as follows. 
 Lights 1: Traffic is travelling south 
@@ -29,7 +29,7 @@ The lights in which traffic is travelling on the same axis can be green at the s
 
 Advanced: At this intersection north bound traffic has a green right-turn signal, which stops the south bound traffic and allows north bound traffic to turn right. This is green at the end of north/south green light and stays green for 10 seconds. During this time north bound is green, north right-turn is green and all other lights are red. 
 
-#Implementation/Outcomes:
+# Implementation/Outcomes:
 
 1.	Implement a front-end and backend (you can use ‘dotnet new’ templates of your choice)
 2.	The backend will contain the logic and state of the running traffic lights. The front-end will be a visual representation of the traffic lights, with the data served from the backend. 
