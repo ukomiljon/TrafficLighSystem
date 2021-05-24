@@ -31,8 +31,8 @@ Advanced: At this intersection north bound traffic has a green right-turn signal
 
 # Implementation/Outcomes:
 
-1.	Implement a front-end and backend (you can use ‘dotnet new’ templates of your choice)
+1.	Implement a front-end and backend 
 2.	The backend will contain the logic and state of the running traffic lights. The front-end will be a visual representation of the traffic lights, with the data served from the backend. 
-3.	There’s no need to have a perfect design on the front end, something simple and functional is fine (unless this is an area of strength you would like to show off). Noting* we will review the client side code.
+3.	There’s no need to have a perfect design on the front end, something simple and functional is fine. Noting* we will review the client side code.
 4.	There’s no need to implement entity framework (or similar) to store the data in a database, a in-memory store is fine
 5.	Code needs to follow architecture & best practices for enterprise grade systems
