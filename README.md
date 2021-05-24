@@ -20,7 +20,7 @@ The first 2 sequences might be 1 second different, if the unit test fails it nee
 
 # Definition:
 
-In this test we would like you to implement a traffic light system. We are required to have 4 sets of lights, as follows. 
+It is required to implement a traffic light system with 4 sets of lights, as follows. 
 Lights 1: Traffic is travelling south 
 Lights 2: Traffic is travelling west 
 Lights 3: Traffic is travelling north
